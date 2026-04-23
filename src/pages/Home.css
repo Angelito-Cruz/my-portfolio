@@ -15,3 +15,29 @@
   gap: 2rem;
   justify-items: center;
 }
+
+.cert-section {
+  text-align: center;
+  padding: 3rem 1rem;
+  background-color: #ffffff;
+}
+
+.cert-section h2 {
+  margin-bottom: 1.5rem;
+  color: #333;
+}
+
+.cert-container {
+  display: flex;
+  justify-content: center;
+}
+
+.cert-image {
+  width: 120px;
+  transition: transform 0.3s;
+  cursor: pointer;
+}
+
+.cert-image:hover {
+  transform: scale(1.1);
+}
