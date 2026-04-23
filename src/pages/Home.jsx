@@ -1,6 +1,6 @@
 import React from 'react';
 import ProjectCard from '../components/ProjectCard';
-import './Home.css'; // We'll create this next
+import './Home.css';
 
 const projects = [
   {
@@ -22,14 +22,52 @@ const projects = [
 
 const Home = () => {
   return (
-    <section id="projects" className="projects-section">
-      <h2>My Projects</h2>
-      <div className="projects-grid">
-        {projects.map((proj, index) => (
-          <ProjectCard key={index} {...proj} />
-        ))}
-      </div>
-    </section>
+    <>
+      {/* CERTIFICATIONS SECTION */}
+      <section className="cert-section">
+        <h2>Certifications</h2>
+
+        <div className="cert-container">
+
+    {/* Badge 1 */}
+    <a
+      href="https://www.credly.com/badges/d4347684-5c27-4695-9497-9d0a40b30c3b/public_url"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      <img
+        src="https://images.credly.com/size/110x110/images/a4dd891f-7bf5-4938-8241-50dc81e8cc00/image.png"
+        alt="Credly Badge 1"
+        className="cert-image"
+      />
+    </a>
+
+    {/* Badge 2 */}
+    <a
+      href="https://www.credly.com/badges/0e64614e-15d5-4dc2-84e3-eb9fb2c04347/public_url"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      <img
+        src="https://images.credly.com/size/110x110/images/b93bf373-3da6-4ada-9879-a0c39d6a11f8/image.png"
+        alt="Credly Badge 2"
+        className="cert-image"
+      />
+    </a>
+
+  </div>
+      </section>
+
+      {/* PROJECTS SECTION */}
+      <section id="projects" className="projects-section">
+        <h2>My Projects</h2>
+        <div className="projects-grid">
+          {projects.map((proj, index) => (
+            <ProjectCard key={index} {...proj} />
+          ))}
+        </div>
+      </section>
+    </>
   );
 };
 
